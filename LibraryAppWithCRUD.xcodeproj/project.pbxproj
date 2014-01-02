@@ -23,6 +23,13 @@
 		2036285A187391750045D821 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20362835187391740045D821 /* Foundation.framework */; };
 		20362862187391750045D821 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20362860187391750045D821 /* InfoPlist.strings */; };
 		20362865187391750045D821 /* LibraryAppWithCRUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20362864187391750045D821 /* LibraryAppWithCRUDTests.m */; };
+		20362884187396C60045D821 /* TableListOfLibraries.m in Sources */ = {isa = PBXBuildFile; fileRef = 20362883187396C60045D821 /* TableListOfLibraries.m */; };
+		2036288818739A3D0045D821 /* LibrarysHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2036288718739A3D0045D821 /* LibrarysHomePage.m */; };
+		2036288B18739BDB0045D821 /* TableListOfLibrarysShelves.m in Sources */ = {isa = PBXBuildFile; fileRef = 2036288A18739BDB0045D821 /* TableListOfLibrarysShelves.m */; };
+		2036288E1873A7E30045D821 /* TableListOfShelvesBooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2036288D1873A7E20045D821 /* TableListOfShelvesBooks.m */; };
+		203628A0187497890045D821 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 2036289F187497890045D821 /* Book.m */; };
+		20993AEB1874BFCD00DC635A /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 20993AEA1874BFCC00DC635A /* Shelf.m */; };
+		20993AEF1874BFD800DC635A /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = 20993AEE1874BFD800DC635A /* Library.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,20 @@
 		20362861187391750045D821 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20362863187391750045D821 /* LibraryAppWithCRUDTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryAppWithCRUDTests.h; sourceTree = "<group>"; };
 		20362864187391750045D821 /* LibraryAppWithCRUDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibraryAppWithCRUDTests.m; sourceTree = "<group>"; };
+		20362882187396C60045D821 /* TableListOfLibraries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListOfLibraries.h; sourceTree = "<group>"; };
+		20362883187396C60045D821 /* TableListOfLibraries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListOfLibraries.m; sourceTree = "<group>"; };
+		2036288618739A3D0045D821 /* LibrarysHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarysHomePage.h; sourceTree = "<group>"; };
+		2036288718739A3D0045D821 /* LibrarysHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarysHomePage.m; sourceTree = "<group>"; };
+		2036288918739BDB0045D821 /* TableListOfLibrarysShelves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListOfLibrarysShelves.h; sourceTree = "<group>"; };
+		2036288A18739BDB0045D821 /* TableListOfLibrarysShelves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListOfLibrarysShelves.m; sourceTree = "<group>"; };
+		2036288C1873A7E20045D821 /* TableListOfShelvesBooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListOfShelvesBooks.h; sourceTree = "<group>"; };
+		2036288D1873A7E20045D821 /* TableListOfShelvesBooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListOfShelvesBooks.m; sourceTree = "<group>"; };
+		2036289E187497890045D821 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		2036289F187497890045D821 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		20993AE91874BFCC00DC635A /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shelf.h; sourceTree = "<group>"; };
+		20993AEA1874BFCC00DC635A /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shelf.m; sourceTree = "<group>"; };
+		20993AED1874BFD800DC635A /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
+		20993AEE1874BFD800DC635A /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +138,22 @@
 		20362839187391740045D821 /* LibraryAppWithCRUD */ = {
 			isa = PBXGroup;
 			children = (
+				203628931873AC6C0045D821 /* ThreeClasses */,
+				2036283F187391740045D821 /* main.m */,
 				20362842187391740045D821 /* AppDelegate.h */,
 				20362843187391740045D821 /* AppDelegate.m */,
 				2036284B187391740045D821 /* MainStoryboard.storyboard */,
 				2036284E187391740045D821 /* ViewController.h */,
 				2036284F187391740045D821 /* ViewController.m */,
+				20362882187396C60045D821 /* TableListOfLibraries.h */,
+				20362883187396C60045D821 /* TableListOfLibraries.m */,
+				2036288918739BDB0045D821 /* TableListOfLibrarysShelves.h */,
+				2036288A18739BDB0045D821 /* TableListOfLibrarysShelves.m */,
+				2036288C1873A7E20045D821 /* TableListOfShelvesBooks.h */,
+				2036288D1873A7E20045D821 /* TableListOfShelvesBooks.m */,
 				2036283A187391740045D821 /* Supporting Files */,
+				2036288618739A3D0045D821 /* LibrarysHomePage.h */,
+				2036288718739A3D0045D821 /* LibrarysHomePage.m */,
 			);
 			path = LibraryAppWithCRUD;
 			sourceTree = "<group>";
@@ -132,7 +163,6 @@
 			children = (
 				2036283B187391740045D821 /* LibraryAppWithCRUD-Info.plist */,
 				2036283C187391740045D821 /* InfoPlist.strings */,
-				2036283F187391740045D821 /* main.m */,
 				20362841187391740045D821 /* LibraryAppWithCRUD-Prefix.pch */,
 				20362845187391740045D821 /* Default.png */,
 				20362847187391740045D821 /* Default@2x.png */,
@@ -158,6 +188,19 @@
 				20362860187391750045D821 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203628931873AC6C0045D821 /* ThreeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2036289E187497890045D821 /* Book.h */,
+				2036289F187497890045D821 /* Book.m */,
+				20993AE91874BFCC00DC635A /* Shelf.h */,
+				20993AEA1874BFCC00DC635A /* Shelf.m */,
+				20993AED1874BFD800DC635A /* Library.h */,
+				20993AEE1874BFD800DC635A /* Library.m */,
+			);
+			name = ThreeClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +316,13 @@
 				20362840187391740045D821 /* main.m in Sources */,
 				20362844187391740045D821 /* AppDelegate.m in Sources */,
 				20362850187391740045D821 /* ViewController.m in Sources */,
+				20362884187396C60045D821 /* TableListOfLibraries.m in Sources */,
+				2036288818739A3D0045D821 /* LibrarysHomePage.m in Sources */,
+				2036288B18739BDB0045D821 /* TableListOfLibrarysShelves.m in Sources */,
+				2036288E1873A7E30045D821 /* TableListOfShelvesBooks.m in Sources */,
+				203628A0187497890045D821 /* Book.m in Sources */,
+				20993AEB1874BFCD00DC635A /* Shelf.m in Sources */,
+				20993AEF1874BFD800DC635A /* Library.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +425,14 @@
 		20362869187391750045D821 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LibraryAppWithCRUD/LibraryAppWithCRUD-Prefix.pch";
 				INFOPLIST_FILE = "LibraryAppWithCRUD/LibraryAppWithCRUD-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -386,10 +440,14 @@
 		2036286A187391750045D821 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LibraryAppWithCRUD/LibraryAppWithCRUD-Prefix.pch";
 				INFOPLIST_FILE = "LibraryAppWithCRUD/LibraryAppWithCRUD-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -398,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LibraryAppWithCRUD.app/LibraryAppWithCRUD";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -406,6 +465,7 @@
 				GCC_PREFIX_HEADER = "LibraryAppWithCRUD/LibraryAppWithCRUD-Prefix.pch";
 				INFOPLIST_FILE = "LibraryAppWithCRUDTests/LibraryAppWithCRUDTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -415,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LibraryAppWithCRUD.app/LibraryAppWithCRUD";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -423,6 +484,7 @@
 				GCC_PREFIX_HEADER = "LibraryAppWithCRUD/LibraryAppWithCRUD-Prefix.pch";
 				INFOPLIST_FILE = "LibraryAppWithCRUDTests/LibraryAppWithCRUDTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -447,6 +509,7 @@
 				2036286A187391750045D821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2036286B187391750045D821 /* Build configuration list for PBXNativeTarget "LibraryAppWithCRUDTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +518,7 @@
 				2036286D187391750045D821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

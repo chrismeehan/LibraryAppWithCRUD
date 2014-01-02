@@ -10,9 +10,15 @@
 
 #import "AppDelegate.h"
 
+#import "Library.h"
+#import "Shelf.h"
+#import "Book.h"
+
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
+        
+  
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
