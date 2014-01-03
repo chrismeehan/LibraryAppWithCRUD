@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2036282E187391740045D821"
-               BuildableName = "LibraryAppWithCRUD.app"
-               BlueprintName = "LibraryAppWithCRUD"
-               ReferencedContainer = "container:LibraryAppWithCRUD.xcodeproj">
+               BuildableName = "LibraryApp.app"
+               BlueprintName = "LibraryApp"
+               ReferencedContainer = "container:LibraryApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "20362855187391750045D821"
-               BuildableName = "LibraryAppWithCRUDTests.octest"
-               BlueprintName = "LibraryAppWithCRUDTests"
-               ReferencedContainer = "container:LibraryAppWithCRUD.xcodeproj">
+               BuildableName = "LibraryAppTests.octest"
+               BlueprintName = "LibraryAppTests"
+               ReferencedContainer = "container:LibraryApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2036282E187391740045D821"
-            BuildableName = "LibraryAppWithCRUD.app"
-            BlueprintName = "LibraryAppWithCRUD"
-            ReferencedContainer = "container:LibraryAppWithCRUD.xcodeproj">
+            BuildableName = "LibraryApp.app"
+            BlueprintName = "LibraryApp"
+            ReferencedContainer = "container:LibraryApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2036282E187391740045D821"
-            BuildableName = "LibraryAppWithCRUD.app"
-            BlueprintName = "LibraryAppWithCRUD"
-            ReferencedContainer = "container:LibraryAppWithCRUD.xcodeproj">
+            BuildableName = "LibraryApp.app"
+            BlueprintName = "LibraryApp"
+            ReferencedContainer = "container:LibraryApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2036282E187391740045D821"
-            BuildableName = "LibraryAppWithCRUD.app"
-            BlueprintName = "LibraryAppWithCRUD"
-            ReferencedContainer = "container:LibraryAppWithCRUD.xcodeproj">
+            BuildableName = "LibraryApp.app"
+            BlueprintName = "LibraryApp"
+            ReferencedContainer = "container:LibraryApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
