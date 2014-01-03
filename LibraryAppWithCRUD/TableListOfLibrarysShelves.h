@@ -5,6 +5,8 @@
 //  Created by Chris Meehan on 12/31/13.
 //  Copyright (c) 2013 Chris Meehan. All rights reserved.
 //
+//This tableview will dispay the Shelves.
+
 
 #import <UIKit/UIKit.h>
 #import "TableListOfShelvesBooks.h"
@@ -13,7 +15,6 @@
 @interface TableListOfLibrarysShelves : UITableViewController
 
 @property (nonatomic,strong) NSMutableArray* anArrayOfShelves;
--(void)setNavTitle:(NSString *)title;
--(IBAction)back:(id)sender;
+-(IBAction)back:(id)sender;//When hitting the back button.
 
 @end

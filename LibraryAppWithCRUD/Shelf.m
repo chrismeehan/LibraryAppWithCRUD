@@ -10,18 +10,7 @@
 
 @implementation Shelf
 
-@synthesize booksOnThisShelf = _booksOnThisShelf;
-
--(void)talk{
-    
-    NSLog(@"hi");
-    
- //   NSLog(@"i am a shelf with %d books", _booksOnThisShelf.count);
-  //  Book* tempBook = [_booksOnThisShelf objectAtIndex:0];
-  //  NSString* tempString = tempBook.getTheBooksTitle;
-  //  NSLog(@"the title be %@" , tempString);
-}
-
+@synthesize arrayOfBooks = _arrayOfBooks;
 
 - (id)init{
     //If the Library was initialized without any specified books, it will be empty.
@@ -30,9 +19,9 @@
     return self;
 }
 
-- (id)initWithArrayOfBooks:(NSMutableArray*)booksToInitialize{
+- (id)initWithArrayOfBooks:(NSMutableArray*)arrayOfBooksToInitialize{
     if (self = [super init]){
-        self.booksOnThisShelf = booksToInitialize;
+        self.arrayOfBooks = arrayOfBooksToInitialize;
     }
     return self;
 }

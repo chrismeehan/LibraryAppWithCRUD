@@ -14,8 +14,47 @@
 
 @implementation TableListOfShelvesBooks
 @synthesize anArrayOfBooks=_anArrayOfBooks;
-- (id)initWithStyle:(UITableViewStyle)style
-{
+
+//For the ability to delete
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(editingStyle==UITableViewCellEditingStyleDelete){
+        [self.anArrayOfBooks removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath ] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    [self.tableView reloadData];
+}
+
+//To refresh the tableview when returning back to it.
+-(void)refresh{
+    [self.tableView reloadData];
+}
+
+//This will add a new Book to the shelf.
+-(IBAction)addBookPressed:(id)sender{
+    BookAddingControllerViewController* bACVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BookAddingControllerViewController"];
+    Book* tempBook = [[Book alloc]initWithBookTitle:@"No Title"];//Start it off blank
+    [self.anArrayOfBooks addObject:tempBook];//Add it to the shelf
+    bACVC.currentBook = tempBook;//Then set up the editing Controller to update its contents.
+    bACVC.BookAddingControllersDelegate = self;//So the editing controller can talk back to me.
+    [self presentViewController:bACVC animated:YES completion:nil];    //Then call to edit it.
+}
+
+-(IBAction)deletePressed:(id)sender{
+    if(deleteYesOrNo==NO){
+        deleteYesOrNo=YES;
+        [self setEditing:YES animated:YES];
+        uIBBI.title = @"resume" ;
+        
+    }
+    else{
+        deleteYesOrNo=NO;
+        [self setEditing:NO animated:YES];
+        uIBBI.title = @"delete category" ;
+        
+    }
+}
+
+- (id)initWithStyle:(UITableViewStyle)style{
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -23,51 +62,36 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-    //_theArrayImResponsableFor = [[NSMutableArray alloc]initWithObjects:@"Book1", @"Book2", @"Book3", nil];
-    NSLog(@"didddd");
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     NSLog(@"count is %d" , [_anArrayOfBooks count]);
     return [_anArrayOfBooks count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"BookTitle";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     // Configure the cell...
     Book* tempBook = [_anArrayOfBooks objectAtIndex:indexPath.row];
     cell.textLabel.text = [tempBook getTheBooksTitle] ;
-    
     return cell;
 }
 
@@ -111,23 +135,20 @@
  */
 
 -(IBAction)back:(id)sender{
-    
-    NSLog(@"back was hit");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+//If a Book gets selected, then it goes to the Read screen.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ReadBook* rB = [self.storyboard instantiateViewControllerWithIdentifier:@"ReadBook"];
+    Book* tempBook = [_anArrayOfBooks objectAtIndex:indexPath.row];
+    rB.currentBook = tempBook;
+    rB.readBooksDelegate = self;
+    [self presentViewController:rB animated:YES completion:nil];
+    
 }
 
 @end

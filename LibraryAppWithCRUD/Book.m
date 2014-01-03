@@ -8,13 +8,13 @@
 
 
 #import "Library.h"
-#import "Shelf.h"
 #import "Book.h"
 
 @implementation Book
 
 @synthesize title = _title;
 @synthesize contents = _contents;
+@synthesize thisBooksShelf = _thisBooksShelf;
 
 - (id)init{
     //If this book was initiallized without a name, name it "No Title"
@@ -23,17 +23,10 @@
     return self;
 }
 
-
--(void)talk{
-    
-    NSLog(@"yo");
-}
-
 - (id)initWithBookTitle:(NSString*) initBookTitle{
-    NSLog(@"redd");
     if (self = [super init]){
+        self.contents = @"All books will start \nwith this being it's contents, until they get modified.";
         self.title = initBookTitle;
-        NSLog(@"books title has been set to: %@", self.title);
     }
     return self;
 }
@@ -41,20 +34,26 @@
 -(NSString*)getTheBooksTitle{
     NSString* tempTitle = [NSString stringWithString:_title];
     return tempTitle;
-    
 }
 
 
-//Place this book on a particular shelf number.
-- (void)enshelf{
-    
-    //controll what shelf this book is sitting on
+- (void)enshelf:(Shelf*)putBookOnThisShelf{ 
+    [putBookOnThisShelf.arrayOfBooks addObject:self];//Add this Book to the Shelf object.
+    self.thisBooksShelf = putBookOnThisShelf; //So this book can keep track of its Shelf's pointer
 }
 
-//Remove this book from whatever shelf number it's on
 - (void)unshelf{
-    //controll what shelf this book is sitting on
-    
+    // If I have no current shelf
+    if(self.thisBooksShelf == nil){
+        //Do nothing.
+    }
+    //Otherwise, there is a Shelf object which is storing me. Remove me from it.
+    else{
+        Shelf* tempShelf =  self.thisBooksShelf;
+        [tempShelf.arrayOfBooks removeObject:self];
+        //Then tell this book that it no longer is holding a pointer to a Shelf object.
+        self.thisBooksShelf = nil;
+    } 
 }
 
 @end
