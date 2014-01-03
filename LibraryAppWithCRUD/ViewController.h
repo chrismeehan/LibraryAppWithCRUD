@@ -13,8 +13,6 @@
 #import "Book.h"
 #import "Shelf.h"
 #import "Library.h"
-#import "BookController.h"
-#import "ClassA.h"
 
 @interface ViewController : UIViewController
     

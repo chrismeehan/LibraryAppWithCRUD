@@ -9,18 +9,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Book.h"
-#import "BookAddingControllerViewController.h"
-#import "ReadBook.h"
 
-@interface TableListOfShelvesBooks : UITableViewController<ListRefreshDelegate>{
+@interface TableListOfShelvesBooks : UITableViewController{
     IBOutlet UIBarButtonItem* uIBBI;
-    BOOL deleteYesOrNo;//This screen gives the options to delete books too.
 }
 
 @property (nonatomic,strong) NSMutableArray* anArrayOfBooks;
 
 -(IBAction)back:(id)sender;
--(IBAction)deletePressed:(id)sender;
--(IBAction)addBookPressed:(id)sender;
 
 @end
