@@ -15,45 +15,6 @@
 @implementation TableListOfShelvesBooks
 @synthesize anArrayOfBooks=_anArrayOfBooks;
 
-//For the ability to delete
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(editingStyle==UITableViewCellEditingStyleDelete){
-        [self.anArrayOfBooks removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath ] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    [self.tableView reloadData];
-}
-
-//To refresh the tableview when returning back to it.
--(void)refresh{
-    [self.tableView reloadData];
-}
-
-//This will add a new Book to the shelf.
--(IBAction)addBookPressed:(id)sender{
-    BookAddingControllerViewController* bACVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BookAddingControllerViewController"];
-    Book* tempBook = [[Book alloc]initWithBookTitle:@"No Title"];//Start it off blank
-    [self.anArrayOfBooks addObject:tempBook];//Add it to the shelf
-    bACVC.currentBook = tempBook;//Then set up the editing Controller to update its contents.
-    bACVC.BookAddingControllersDelegate = self;//So the editing controller can talk back to me.
-    [self presentViewController:bACVC animated:YES completion:nil];    //Then call to edit it.
-}
-
--(IBAction)deletePressed:(id)sender{
-    if(deleteYesOrNo==NO){
-        deleteYesOrNo=YES;
-        [self setEditing:YES animated:YES];
-        uIBBI.title = @"resume" ;
-        
-    }
-    else{
-        deleteYesOrNo=NO;
-        [self setEditing:NO animated:YES];
-        uIBBI.title = @"delete category" ;
-        
-    }
-}
-
 - (id)initWithStyle:(UITableViewStyle)style{
     self = [super initWithStyle:style];
     if (self) {
@@ -141,14 +102,5 @@
 
 #pragma mark - Table view delegate
 
-//If a Book gets selected, then it goes to the Read screen.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ReadBook* rB = [self.storyboard instantiateViewControllerWithIdentifier:@"ReadBook"];
-    Book* tempBook = [_anArrayOfBooks objectAtIndex:indexPath.row];
-    rB.currentBook = tempBook;
-    rB.readBooksDelegate = self;
-    [self presentViewController:rB animated:YES completion:nil];
-    
-}
 
 @end

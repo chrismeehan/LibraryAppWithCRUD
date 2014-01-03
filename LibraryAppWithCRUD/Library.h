@@ -14,7 +14,6 @@
 
 @interface Library : NSObject
 
-//@property (assign,nonatomic,readwrite) int numOfShelves;
 @property (strong,nonatomic,readwrite) NSMutableArray* arrayOfShelves;
 @property (strong,nonatomic,readwrite) NSString* libraryName;
 @property (nonatomic,readwrite) int numberOfShelves;
